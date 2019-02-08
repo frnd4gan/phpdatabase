@@ -4,7 +4,7 @@ echo "<br> port".$dbport = getenv("MYSQL_SERVICE_PORT");
 echo "<br> User ".$dbuser = getenv("databaseuser");
 echo "<br>PWD ".$dbpwd = getenv("databasepassword");
 echo "<br>database ".$dbname = getenv("databasename");
-
+die;
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
