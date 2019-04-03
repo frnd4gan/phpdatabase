@@ -2,7 +2,7 @@
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("MYSQL_USER");
-$dbpwd = getenv("MYSQL_PASSWORD");
+echo $dbpwd = $MYSQL_PASSWORD;
 $dbname = getenv("MYSQL_DATABASE");
 
 new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
