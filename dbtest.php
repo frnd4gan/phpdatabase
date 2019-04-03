@@ -1,16 +1,15 @@
 <?php
-$dbhost = 'localhost';
-//$dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = 'root_admin';
-$dbpwd = 'root_admin';
 $dbname = 'sampledb';
+$servername = "localhost";
+$username = "root_admin";
+$password = "root_admin";
 
-$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
-if ($connection->connect_errno) {
-    printf("Connect failed: %s\n", $mysqli->connect_error);
-    exit();
-} else {
-    printf("Connected to the database");
-}
-$connection->close();
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
 ?>
