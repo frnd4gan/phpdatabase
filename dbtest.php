@@ -3,7 +3,7 @@ $dbhost = 'localhost';
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = 'root_admin';
 $dbpwd = 'root_admin';
-$dbname = getenv("MYSQL_DATABASE");
+$dbname = 'sampledb';
 
 new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($connection->connect_errno) {
