@@ -1,6 +1,6 @@
 <?php
 $dbhost = 'localhost';
-$dbport = getenv("MYSQL_SERVICE_PORT");
+//$dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = 'root_admin';
 $dbpwd = 'root_admin';
 $dbname = 'sampledb';
