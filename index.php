@@ -1,9 +1,12 @@
 <?php
 
-echo "Welcome to OpenShift Online Developer Preview";
-echo "<br>To test the database, hit the dbtest.php URL";
-
-
-echo "<br><br>This assumes that you have the correct env variables set";
-echo "<BR><BR>The environment variables required are databaseuser, databasepassword, and databasenmae.";
-
+       $dbhost = 'localhost:3306';
+         $dbuser = 'root_admin';
+         $dbpass = 'root_admin';
+         $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+         
+         if(! $conn ) {
+            die('Could not connect: ' . mysql_error());
+         }
+         echo 'Connected successfully';
+         mysql_close($conn);
