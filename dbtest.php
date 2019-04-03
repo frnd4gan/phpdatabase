@@ -1,9 +1,9 @@
 <?php
-echo "<br> Host is ".$dbhost = getenv("MYSQL_SERVICE_HOST")."<br>";
-echo "<br>Port is ".$dbport = getenv("MYSQL_SERVICE_PORT")."<br>";
-echo "<br> User is ".$dbuser = 'root_admin';//getenv("MYSQL_USER")."<br>";
-echo "<br> password is".$dbpwd = 'root_admin';//getenv("MYSQL_PASSWORD")."<br>";
-echo "<br>DBname is".$dbname = 'sampledb';getenv("MYSQL_DATABASE")."<br>";
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbport = getenv("MYSQL_SERVICE_PORT");
+$dbuser = getenv("MYSQL_USER");
+$dbpwd = getenv("MYSQL_PASSWORD");
+$dbname = getenv("MYSQL_DATABASE");
 
 new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($connection->connect_errno) {
