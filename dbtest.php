@@ -1,8 +1,8 @@
 <?php
-$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbhost = 'localhost';//getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("MYSQL_USER");
-echo $dbpwd = $MYSQL_PASSWORD;
+$dbpwd = $MYSQL_PASSWORD;
 $dbname = getenv("MYSQL_DATABASE");
 
 new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
